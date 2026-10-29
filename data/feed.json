@@ -55,6 +55,20 @@
    "text": "Both teams are living at the rim tonight, far more than usual, and VKKM are already in the bonus. **Every VKM drive now is two free throws or a layup.** VKKM's answer has to be walls in the gap, not reaches, for six minutes.",
    "ts": 1793289324,
    "evidence": "Rim share: VKKM 56% (usually 32%), VKM 55% (usually 33%). VKKM 4 team fouls in Q4"
+  },
+  {
+   "when": "Q4 5:57",
+   "tag": "SHOT QUALITY",
+   "text": "VKM are behind on makes, not on looks: their shot locations should be worth a point a shot and they are getting about 0.7. **Norvaišas has played 21 straight minutes**; if Šležas wants fresh legs at the line for the last two minutes, the window is the next dead ball.",
+   "ts": 1793289392,
+   "evidence": "VKM expected 1.01 pts/shot from locations, actual 0.69. Norvaišas #40: 21 min without a break"
+  },
+  {
+   "when": "Q4 5:52",
+   "tag": "LINEUP",
+   "text": "Steponaitis has answered with personnel instead of a timeout. The Kurmis–Šalvis–Jasėnas–Budzinskas–Šilgalis group is VKKM's best five tonight, and **swapping Afanasjev and Liubinas out for Jasėnas and Šilgalis** is the change that has worked: the other version of this five has not scored.",
+   "ts": 1793289433,
+   "evidence": "Kurmis/Šalvis/Jasėnas/Budzinskas/Šilgalis 8–3 in 12 poss. With Afanasjev + Liubinas instead: 0–7 in 14"
   }
  ]
 }
