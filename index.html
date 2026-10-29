@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Courtside Live</title>
+<meta name="description" content="Live scouting notebook: score, shot charts and a coach's-eye commentary.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Gochi+Hand&display=swap" rel="stylesheet">
+<style>
+/* Sketchbook page (style/sketchbook/STYLE.md). Paper look in both themes by design: never invert.
+   Team markers: cyan = home, orange = away. Red = danger / made-against, lime = highlighter. */
+:root {
+  --paper: #f3f1ea; --dot: #c9c6bc; --ink: #1d1d1b; --pencil: #77776f;
+  --cyan: #36b3e6; --lime: #c5ec2f; --red: #d8262c; --orange: #f07a22;
+  --grid: 18px;
+  --hand: "Architects Daughter", "Comic Neue", "Segoe Print", cursive;
+  --num: "Gochi Hand", "Architects Daughter", "Segoe Print", cursive;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --paper: #f3f1ea; --ink: #1d1d1b; } }
+:root[data-theme="dark"] { --paper: #f3f1ea; --ink: #1d1d1b; }
+* { box-sizing: border-box; }
+body {
+  margin: 0; background-color: var(--paper);
+  background-image: radial-gradient(var(--dot) 1px, transparent 1.2px); background-size: var(--grid) var(--grid);
+  color: var(--ink); font-family: var(--hand); font-size: 15px; line-height: 1.45;
+  text-transform: uppercase; letter-spacing: .03em;
+}
+.wrap { max-width: 1160px; margin: 0 auto; padding-block: 22px 40px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.sheet { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 30px 26px; }
+.mod { grid-column: span 6; min-width: 0; position: relative; }
+.w4 { grid-column: span 4; } .w5 { grid-column: span 5; } .w7 { grid-column: span 7; } .w8 { grid-column: span 8; } .w12 { grid-column: span 12; }
+@media (max-width: 820px) { .mod, .w4, .w5, .w7, .w8, .w12 { grid-column: span 12; } }
+.title { font-size: 19px; display: inline-block; padding-bottom: 2px; margin: 0 0 8px; font-weight: 400;
+  background: linear-gradient(transparent 62%, var(--lime) 62%, var(--lime) 92%, transparent 92%); }
+.big { font-family: var(--num); line-height: 1; text-transform: none; }
+.muted { color: var(--pencil); }
+.small { font-size: 13px; }
+.prose { text-transform: none; letter-spacing: .01em; }
+.hl-cyan { background: linear-gradient(transparent 35%, rgb(54 179 230 / .55) 35%, rgb(54 179 230 / .55) 90%, transparent 90%); }
+.hl-orange { background: linear-gradient(transparent 35%, rgb(240 122 34 / .5) 35%, rgb(240 122 34 / .5) 90%, transparent 90%); }
+svg { overflow: visible; display: block; width: 100%; height: auto; }
+svg text { font-family: var(--hand); fill: var(--ink); font-size: 13px; text-transform: uppercase; }
+
+header.top { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 10px 24px; margin-bottom: 18px; }
+.eyebrow { font-size: 13px; color: var(--pencil); }
+h1 { font-weight: 400; font-size: clamp(22px, 3.4vw, 32px); margin: 2px 0 0; text-wrap: balance; line-height: 1.15; }
+h1 .v { font-family: var(--num); text-transform: none; color: var(--pencil); padding: 0 .3em; }
+.seg { display: flex; gap: 6px; flex-wrap: wrap; }
+.seg button { font: inherit; text-transform: inherit; letter-spacing: inherit; background: transparent; color: var(--ink);
+  border: 1.4px solid var(--ink); border-radius: 14px 4px 12px 5px / 5px 12px 4px 14px; padding: 3px 14px; cursor: pointer; font-size: 14px; }
+.seg button[aria-pressed="true"], .seg button[aria-selected="true"] { background: var(--lime); }
+.seg button:focus-visible { outline: 2px dashed var(--ink); outline-offset: 3px; }
+.seg.sm button { padding: 1px 10px; font-size: 13px; }
+.pill { display: inline-block; border: 1.3px solid var(--ink); border-radius: 10px 3px 9px 4px; padding: 0 8px; font-size: 13px; }
+.pill.live { background: var(--red); color: var(--paper); border-color: var(--red); animation: blink 1.6s steps(2) infinite; }
+.pill.final { background: var(--ink); color: var(--paper); }
+@keyframes blink { 50% { opacity: .55; } }
+@media (prefers-reduced-motion: reduce) { .pill.live { animation: none; } }
+
+.score { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 8px 18px; }
+.score .team { display: grid; gap: 2px; }
+.score .team.away { text-align: right; }
+.score .pts { font-size: clamp(56px, 10vw, 96px); }
+.score .mid { text-align: center; display: grid; gap: 4px; justify-items: center; }
+.score .clock { font-family: var(--num); font-size: 34px; text-transform: none; }
+.qrow { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; font-size: 13px; }
+.qrow b { font-family: var(--num); font-weight: 400; font-size: 17px; }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; font-size: 13px; }
+.away .chips { justify-content: flex-end; }
+.chip { border: 1px dashed var(--ink); border-radius: 8px; padding: 0 6px; }
+.chip.warn { background: rgb(216 38 44 / .18); border-style: solid; border-color: var(--red); }
+@media (max-width: 520px) { .score { grid-template-columns: 1fr 1fr; } .score .mid { grid-column: span 2; order: -1; } }
+
+.feed { display: grid; gap: 14px; }
+.entry { display: grid; grid-template-columns: 78px 1fr; gap: 2px 12px; }
+.entry .when { font-family: var(--num); text-transform: none; font-size: 18px; line-height: 1.2; }
+.entry .tag { font-size: 12px; justify-self: start; padding: 0 4px; }
+.entry .txt { grid-column: 2; text-transform: none; font-size: 15.5px; letter-spacing: .01em; max-width: 68ch; }
+.entry .txt b { font-weight: 400; background: linear-gradient(transparent 55%, var(--lime) 55%, var(--lime) 92%, transparent 92%); }
+.entry .ev { grid-column: 2; font-size: 12px; color: var(--pencil); text-transform: none; }
+.entry + .entry { border-top: 1px dotted var(--pencil); padding-top: 12px; }
+.tag { background: rgb(54 179 230 / .35); }
+.tag.t-ADJUSTMENT, .tag.t-MATCHUP { background: rgb(240 122 34 / .45); }
+.tag.t-MOMENTUM, .tag.t-FOUL-TROUBLE { background: rgb(216 38 44 / .35); }
+.tag.t-HIDDEN-IMPACT, .tag.t-LINEUP { background: var(--lime); }
+.tag.t-PERIOD { background: var(--ink); color: var(--paper); }
+.tag.t-PRE { background: transparent; border: 1px dashed var(--ink); }
+.empty { text-transform: none; color: var(--pencil); }
+
+.tbl-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; font-variant-numeric: tabular-nums; }
+th, td { padding: 3px 6px; text-align: right; white-space: nowrap; }
+th { font-weight: 400; color: var(--pencil); border-bottom: 1.3px solid var(--ink); }
+td.n, th.n { text-align: left; }
+td.wrap { white-space: normal; }
+td.no { font-family: var(--num); text-transform: none; font-size: 16px; text-align: center; }
+tr.on td.n { background: linear-gradient(transparent 40%, var(--lime) 40%, var(--lime) 90%, transparent 90%); }
+td.foul { color: var(--red); }
+td.up { color: #2c7a1f; } td.down { color: var(--red); }
+tbody tr + tr td { border-top: 1px dotted var(--dot); }
+
+.courts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 22px; }
+@media (max-width: 520px) { .courts { grid-template-columns: 1fr; } }
+.ctl { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; margin-bottom: 8px; }
+.keys { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px 22px; }
+.key h3 { font-weight: 400; font-size: 15px; margin: 0 0 4px; }
+.key h3 .big { font-size: 26px; margin-right: 6px; }
+.key p { margin: 0; text-transform: none; font-size: 14.5px; letter-spacing: .01em; }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px 16px; }
+.card .nm { font-size: 13.5px; }
+.card .meta { font-size: 12px; color: var(--pencil); text-transform: none; }
+.foot { font-size: 12px; color: var(--pencil); text-transform: none; }
+.updated { font-size: 12px; color: var(--pencil); text-transform: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div>
+      <div class="eyebrow" id="eyebrow">Loading…</div>
+      <h1 id="h1"><span class="hl-cyan">Home</span><span class="v">vs</span><span class="hl-orange">Away</span></h1>
+    </div>
+    <div class="seg" role="tablist">
+      <button role="tab" id="tab-live" aria-selected="true" aria-controls="live">Live</button>
+      <button role="tab" id="tab-pre" aria-selected="false" aria-controls="pre">Preview</button>
+    </div>
+  </header>
+
+  <!-- ============================ LIVE ============================ -->
+  <section id="live" role="tabpanel" aria-labelledby="tab-live" class="sheet">
+    <div class="mod w12">
+      <div class="score">
+        <div class="team home"><span class="small" id="n-home">Home</span><span class="big pts" id="s-home">0</span><div class="chips" id="c-home"></div></div>
+        <div class="mid"><span class="pill" id="status">Pre-game</span><span class="clock" id="clock">–</span>
+          <div class="qrow" id="qrow"></div><span class="updated" id="upd"></span></div>
+        <div class="team away"><span class="small" id="n-away">Away</span><span class="big pts" id="s-away">0</span><div class="chips" id="c-away"></div></div>
+      </div>
+    </div>
+
+    <div class="mod w7">
+      <h2 class="title">Coach's notebook</h2>
+      <div class="feed" id="feed"></div>
+    </div>
+
+    <div class="mod w5">
+      <h2 class="title">Shot chart</h2>
+      <div class="ctl">
+        <div class="seg sm" id="sc-team"></div>
+        <div class="seg sm" id="sc-q"></div>
+      </div>
+      <svg id="court-live" viewBox="-20 -10 490 330" role="img" aria-label="Shot chart"></svg>
+      <div class="small muted prose">● made · ○ missed. Numbers in each zone: tonight's share of shots and FG%, with the season share underneath.</div>
+      <h2 class="title" style="margin-top:20px">Momentum</h2>
+      <svg id="flow" viewBox="0 0 440 230" role="img" aria-label="Score margin by game minute"></svg>
+      <div class="small muted" id="flow-note"></div>
+    </div>
+
+    <div class="mod">
+      <h2 class="title">Where the shots come from</h2>
+      <div class="tbl-wrap"><table id="zones"></table></div>
+      <div class="small muted prose" style="margin-top:6px">Share of shots by zone tonight; arrows mark a shift of 10+ points from the team's earlier games.</div>
+    </div>
+    <div class="mod">
+      <h2 class="title">How possessions start</h2>
+      <div class="tbl-wrap"><table id="starts"></table></div>
+      <div class="small muted prose" style="margin-top:6px">Points per possession by what came before it. "Set defence" = after a made basket or a dead-ball turnover.</div>
+    </div>
+
+    <div class="mod">
+      <h2 class="title">Lineups tonight</h2>
+      <div class="tbl-wrap"><table id="lineups"></table></div>
+      <div class="small muted prose" style="margin-top:6px">Fives with 6+ possessions (offence + defence). Net = points scored minus allowed per 100 possessions.</div>
+    </div>
+    <div class="mod">
+      <h2 class="title">Timeouts and runs</h2>
+      <div class="tbl-wrap"><table id="tos"></table></div>
+    </div>
+
+    <div class="mod"><h2 class="title" id="bt-home">Home box</h2><div class="tbl-wrap"><table id="box-home"></table></div></div>
+    <div class="mod"><h2 class="title" id="bt-away">Away box</h2><div class="tbl-wrap"><table id="box-away"></table></div></div>
+    <div class="mod w12 foot" id="foot-live">Highlighted name = on the floor. On/off = team net per 100 possessions with the player on / off. Data: FIBA LiveStats, read every 20 seconds. The notebook is written by an AI analyst (Claude) from the play-by-play, so it can trail the arena by a minute or two.</div>
+  </section>
+
+  <!-- ============================ PREVIEW ============================ -->
+  <section id="pre" role="tabpanel" aria-labelledby="tab-pre" class="sheet" hidden>
+    <div class="mod w12">
+      <h2 class="title">Things to watch</h2>
+      <div class="keys" id="keys"></div>
+    </div>
+    <div class="mod w12">
+      <h2 class="title">Season shot maps</h2>
+      <div class="ctl"><div class="seg sm" id="pm-mode"></div></div>
+      <div class="courts">
+        <div><div class="small" id="pm-l-h"></div><svg id="pm-l" viewBox="-20 -10 490 330" role="img" aria-label="Home team season shot map"></svg></div>
+        <div><div class="small" id="pm-r-h"></div><svg id="pm-r" viewBox="-20 -10 490 330" role="img" aria-label="Away team season shot map"></svg></div>
+      </div>
+      <div class="small muted prose" id="pm-note"></div>
+    </div>
+    <div class="mod w12">
+      <h2 class="title">Player shot maps</h2>
+      <div class="ctl"><div class="seg sm" id="pp-team"></div></div>
+      <div class="cards" id="pp-cards"></div>
+    </div>
+    <div class="mod"><h2 class="title">Profile side by side</h2><div class="tbl-wrap"><table id="prof"></table></div></div>
+    <div class="mod"><h2 class="title">Best and worst fives so far</h2><div class="tbl-wrap"><table id="pre-lineups"></table></div></div>
+    <div class="mod w12 foot" id="foot-pre"></div>
+  </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/roughjs@4.6.6/bundled/rough.js"></script>
+<script>
+const NS = 'http://www.w3.org/2000/svg';
+const INK = '#1d1d1b', CYAN = '#36b3e6', ORANGE = '#f07a22', RED = '#d8262c', LIME = '#c5ec2f', PENCIL = '#77776f';
+const TEAMC = { 1: CYAN, 2: ORANGE };
+const RO = { roughness: 1, bowing: 1.2, strokeWidth: 1.2, stroke: INK };
+const ZONES = ['rim', 'paint', 'mid', 'corner3', 'above3'];
+const ZL = { rim: 'At the rim', paint: 'Short paint', mid: 'Mid-range', corner3: 'Corner 3', above3: 'Above-break 3' };
+const START = { live_to: 'After a steal', dreb: 'After a def. rebound', set: 'Set defence', early: 'Shot in first 8 s' };
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const md = s => esc(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
+const sgn = v => v == null ? '–' : (v > 0 ? '+' : '') + v;
+function T(svg, x, y, s, a = {}) { const t = document.createElementNS(NS, 'text'); t.setAttribute('x', x); t.setAttribute('y', y); t.textContent = s; for (const k in a) t.setAttribute(k, a[k]); svg.appendChild(t); return t; }
+function clear(svg) { while (svg.firstChild) svg.removeChild(svg.firstChild); }
+const store = { get(k, d) { try { return localStorage.getItem(k) ?? d; } catch (e) { return d; } }, set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} } };
+
+let PRE = null, S = { status: 'pre' }, FEED = { items: [] };
+const ui = { tab: store.get('tab', 'live'), scTeam: '1', scQ: 'all', pmMode: 'own', ppTeam: '1' };
+
+/* ---------------- court (metres; basket at 0,0; y out from baseline) ---------------- */
+const PX = 30, CX = 225, CY = 47;              // 1 m = 30 px; basket drawn at (225, 47)
+const P = (x, y) => [CX + x * PX, CY + y * PX];
+function arcPts(r, a0, a1, n = 40, cy = 0) { const o = []; for (let i = 0; i <= n; i++) { const a = a0 + (a1 - a0) * i / n; o.push(P(r * Math.cos(a), cy + r * Math.sin(a))); } return o; }
+const A3 = Math.asin(1.415 / 6.75);           // where the 3pt arc meets the corner lines
+function zonePath(z) {
+  const toD = pts => 'M' + pts.map(p => p.map(v => v.toFixed(1)).join(',')).join('L') + 'Z';
+  const B = -1.575, R3 = 6.75;
+  if (z === 'rim') return toD(arcPts(1.6, Math.PI * 0.02 - 0.2, Math.PI + 0.2));
+  if (z === 'paint') return toD([P(-2.45, B), P(2.45, B), P(2.45, 4.225), P(-2.45, 4.225)]) + toD(arcPts(1.6, -0.2, Math.PI + 0.2).reverse());
+  if (z === 'mid') return toD([P(-6.6, B), P(-6.6, 1.415), ...arcPts(R3, Math.PI - A3, A3), P(6.6, 1.415), P(6.6, B)]) +
+                          toD([P(-2.45, B), P(-2.45, 4.225), P(2.45, 4.225), P(2.45, B)]);
+  if (z === 'corner3') return toD([P(-7.5, B), P(-6.6, B), P(-6.6, 1.415), P(-7.5, 1.415)]) + toD([P(6.6, B), P(7.5, B), P(7.5, 1.415), P(6.6, 1.415)]);
+  if (z === 'above3') return toD([P(-7.5, 1.415), P(-6.6, 1.415), ...arcPts(R3, Math.PI - A3, A3), P(6.6, 1.415), P(7.5, 1.415), P(7.5, 8.9), P(-7.5, 8.9)]);
+}
+const ZLAB = { rim: [0, 0.75], paint: [0, 3.0], mid: [-4.6, 3.6], corner3: [-7.05, 0.1], above3: [0, 7.7] };
+function drawCourt(svg) {
+  clear(svg); const rc = rough.svg(svg), o = { ...RO, roughness: .7, strokeWidth: 1.1 };
+  const L = (a, b) => svg.appendChild(rc.line(...P(...a), ...P(...b), o));
+  L([-7.5, -1.575], [7.5, -1.575]); L([-7.5, -1.575], [-7.5, 8.9]); L([7.5, -1.575], [7.5, 8.9]);
+  svg.appendChild(rc.rectangle(...P(-2.45, -1.575), 4.9 * PX, 5.8 * PX, o));
+  svg.appendChild(rc.linearPath(arcPts(1.8, 0, Math.PI, 40, 4.225), o));
+  svg.appendChild(rc.linearPath(arcPts(1.25, 0, Math.PI), { ...o, strokeWidth: .8 }));
+  L([-6.6, -1.575], [-6.6, 1.415]); L([6.6, -1.575], [6.6, 1.415]);
+  svg.appendChild(rc.linearPath(arcPts(6.75, A3, Math.PI - A3, 60), o));
+  L([-0.9, -0.375], [0.9, -0.375]);
+  svg.appendChild(rc.circle(...P(0, 0), 0.45 * PX, { ...o, roughness: .4 }));
+  svg.appendChild(rc.linearPath(arcPts(1.8, Math.PI, 2 * Math.PI, 40, 4.225), { ...o, strokeLineDash: [4, 5], strokeWidth: .8 }));
+  return rc;
+}
+function shadeZones(svg, rc, zt, color, ref) {
+  for (const z of ZONES) {
+    const v = zt?.[z]; if (!v || !v.fga) continue;
+    const a = Math.min(1, v.share / 40);
+    svg.appendChild(rc.path(zonePath(z), { stroke: 'none', fill: color, fillStyle: 'hachure', hachureGap: 7 - 4.5 * a, fillWeight: .6 + 1.4 * a, roughness: .8 }));
+  }
+  for (const z of ZONES) {
+    const v = zt?.[z]; if (!v) continue;
+    const [lx, ly] = ZLAB[z], [x, y] = P(lx, ly);
+    if (!v.fga && !(ref && ref[z]?.fga)) continue;
+    T(svg, x, y, v.fga ? `${Math.round(v.share)}% · ${v.pct == null ? '–' : Math.round(v.pct) + '%'}` : '–',
+      { 'text-anchor': 'middle', 'font-size': 14, 'font-family': 'Gochi Hand', style: 'text-transform:none' });
+    if (ref && ref[z] && ref[z].share != null)
+      T(svg, x, y + 14, `usually ${Math.round(ref[z].share)}%`, { 'text-anchor': 'middle', 'font-size': 10.5, fill: PENCIL });
+  }
+}
+function dots(svg, shots, color) {
+  for (const s of shots) {
+    const [x, y] = P(s[0], s[1]);
+    if (y > CY + 8.8 * PX) continue;
+    const c = document.createElementNS(NS, 'circle');
+    c.setAttribute('cx', x.toFixed(1)); c.setAttribute('cy', y.toFixed(1)); c.setAttribute('r', s[2] ? 4.2 : 3.6);
+    c.setAttribute('fill', s[2] ? color : 'none'); c.setAttribute('stroke', s[2] ? INK : color); c.setAttribute('stroke-width', s[2] ? 1 : 1.6);
+    svg.appendChild(c);
+  }
+}
+function zoneTable(shots) {
+  const n = shots.length || 1, o = {};
+  for (const z of ZONES) { const zs = shots.filter(s => s.z === z), m = zs.filter(s => s.m).length;
+    o[z] = { fga: zs.length, fgm: m, share: 100 * zs.length / n, pct: zs.length ? 100 * m / zs.length : null }; }
+  return o;
+}
+
+/* ---------------- tabs + segmented controls ---------------- */
+function showTab(which) {
+  ui.tab = which; store.set('tab', which);
+  const live = which !== 'pre';
+  $('live').hidden = !live; $('pre').hidden = live;
+  $('tab-live').setAttribute('aria-selected', live); $('tab-pre').setAttribute('aria-selected', !live);
+  live ? renderLive() : renderPre();
+}
+$('tab-live').onclick = () => showTab('live');
+$('tab-pre').onclick = () => showTab('pre');
+function seg(el, opts, cur, on) {
+  el.innerHTML = opts.map(([v, l]) => `<button type="button" data-v="${esc(v)}" aria-pressed="${v === cur}">${esc(l)}</button>`).join('');
+  el.onclick = e => { const b = e.target.closest('button'); if (b) on(b.dataset.v); };
+}
+const nm = k => (S[k === '1' ? 'home' : 'away']?.short) || PRE?.game?.[k === '1' ? 'home_short' : 'away_short'] || (k === '1' ? 'Home' : 'Away');
+const preTeam = k => PRE?.teams?.[k];
+
+/* ---------------- header ---------------- */
+function renderHeader() {
+  const g = PRE?.game || {};
+  const hn = g.home_name || preTeam('1')?.name || S.home?.name || 'Home', an = g.away_name || preTeam('2')?.name || S.away?.name || 'Away';
+  $('h1').innerHTML = `<span class="hl-cyan">${esc(hn)}</span><span class="v">vs</span><span class="hl-orange">${esc(an)}</span>`;
+  $('eyebrow').textContent = [g.league, g.date, g.tip, g.venue].filter(Boolean).join(' · ') || 'Live';
+  document.title = `${g.home_short || 'Home'} v ${g.away_short || 'Away'} · Courtside Live`;
+  $('n-home').textContent = (g.home_short || 'Home') + ' · home'; $('n-away').textContent = (g.away_short || 'Away') + ' · away';
+}
+
+/* ---------------- LIVE ---------------- */
+function renderLive() {
+  renderHeader();
+  const H = S.home || {}, A = S.away || {};
+  $('s-home').textContent = H.pts ?? 0; $('s-away').textContent = A.pts ?? 0;
+  const st = $('status');
+  st.className = 'pill' + (S.status === 'live' ? ' live' : S.status === 'final' ? ' final' : '');
+  st.textContent = { pre: 'Pre-game', live: 'Live', final: 'Final' }[S.status] || 'Pre-game';
+  const q = S.period > 4 ? 'OT' + (S.period - 4) : 'Q' + (S.period || 1);
+  $('clock').textContent = S.status === 'pre' ? (PRE?.game?.tip ? 'Tip ' + PRE.game.tip : '–') : S.status === 'final' ? 'FT' : `${q} · ${S.clock || '10:00'}`;
+  $('qrow').innerHTML = (S.quarters || []).map((x, i) => `<span>${i < 4 ? 'Q' + (i + 1) : 'OT'} <b>${x[0]}–${x[1]}</b></span>`).join('');
+  $('upd').textContent = S.updated ? 'updated ' + S.updated : '';
+  const chips = t => !t.name ? '' : [`<span class="chip${t.fouls >= 4 ? ' warn' : ''}">team fouls ${t.fouls}</span>`,
+    `<span class="chip">timeouts used ${t.timeouts}</span>`, t.ppp != null ? `<span class="chip">${t.ppp.toFixed(2)} pts / poss</span>` : ''].join('');
+  $('c-home').innerHTML = chips(H); $('c-away').innerHTML = chips(A);
+  $('bt-home').textContent = nm('1') + ' box'; $('bt-away').textContent = nm('2') + ' box';
+  renderFeed(); renderShotChart(); drawFlow(); renderZones(); renderStarts(); renderLineups(); renderTos();
+  renderBox('box-home', H.players); renderBox('box-away', A.players);
+}
+
+function renderFeed() {
+  const items = (FEED.items || []).slice().reverse();
+  $('feed').innerHTML = items.length ? items.map(e => `
+    <div class="entry"><span class="when">${esc(e.when)}</span><span class="tag t-${esc(String(e.tag || '').replace(/\s+/g, '-'))}">${esc(e.tag === 'PRE' ? 'pre-game' : String(e.tag || '').toLowerCase())}</span>
+    <div class="txt">${md(e.text)}</div>${e.evidence ? `<div class="ev">${esc(e.evidence)}</div>` : ''}</div>`).join('')
+    : '<p class="empty">The notebook starts at tip-off. The Preview tab has the scouting report.</p>';
+}
+
+function renderShotChart() {
+  seg($('sc-team'), [['1', nm('1')], ['2', nm('2')]], ui.scTeam, v => { ui.scTeam = v; renderShotChart(); });
+  const qs = [...new Set((S.shots || []).map(s => s.q))].sort();
+  seg($('sc-q'), [['all', 'All'], ...qs.map(q => [String(q), q > 4 ? 'OT' : 'Q' + q])], ui.scQ, v => { ui.scQ = v; renderShotChart(); });
+  const svg = $('court-live'), rc = drawCourt(svg), k = +ui.scTeam;
+  const shots = (S.shots || []).filter(s => s.tm === k && (ui.scQ === 'all' || String(s.q) === ui.scQ));
+  shadeZones(svg, rc, zoneTable(shots), TEAMC[k], preTeam(String(k))?.zones);
+  dots(svg, shots.map(s => [s.x, s.y, s.m]), TEAMC[k]);
+  if (!shots.length) T(svg, CX, CY + 5.4 * PX, S.status === 'pre' ? 'shots appear here from tip-off' : 'no shots yet', { 'text-anchor': 'middle', fill: PENCIL });
+}
+
+function drawFlow() {
+  const svg = $('flow'); if ($('live').hidden) return; clear(svg);
+  const rc = rough.svg(svg), x0 = 30, W = 400, y0 = 110;
+  const end = Math.max(2400, S.t || 0), X = t => x0 + W * Math.min(t, end) / end;
+  const c = S.curve || [], mx = Math.max(10, ...c.map(p => Math.abs(p[1]))), sc = 95 / mx;
+  svg.appendChild(rc.line(x0, y0, x0 + W, y0, { ...RO, strokeWidth: 1 }));
+  for (let q = 0; q <= 4; q++) {
+    svg.appendChild(rc.line(X(q * 600), 12, X(q * 600), 208, { ...RO, stroke: PENCIL, strokeWidth: .8, strokeLineDash: [4, 4] }));
+    if (q < 4) T(svg, X(q * 600 + 300) - 8, 226, 'Q' + (q + 1), { fill: PENCIL, 'font-size': 12 });
+  }
+  const step = mx > 25 ? 20 : 10;
+  for (let m = -mx + (mx % step); m <= mx; m += step) if (m) T(svg, 2, y0 - m * sc + 4, sgn(m), { 'font-size': 11, fill: PENCIL });
+  if (c.length > 1) {
+    const pts = []; let prev = 0;
+    c.forEach(([t, m]) => { pts.push([X(t), y0 - prev * sc]); pts.push([X(t), y0 - m * sc]); prev = m; });
+    pts.push([X(S.t || c[c.length - 1][0]), y0 - prev * sc]);
+    const pos = pts.map(([x, y]) => [x, Math.min(y, y0)]), neg = pts.map(([x, y]) => [x, Math.max(y, y0)]);
+    svg.appendChild(rc.polygon([[pos[0][0], y0], ...pos, [pos[pos.length - 1][0], y0]], { ...RO, stroke: 'none', fill: CYAN, fillStyle: 'hachure', hachureGap: 3, fillWeight: 1.4 }));
+    svg.appendChild(rc.polygon([[neg[0][0], y0], ...neg, [neg[neg.length - 1][0], y0]], { ...RO, stroke: 'none', fill: ORANGE, fillStyle: 'hachure', hachureGap: 3, fillWeight: 1.4 }));
+    svg.appendChild(rc.linearPath(pts, { ...RO, roughness: .6 }));
+    for (const r of (S.runs || []).slice(-3)) {
+      const xm = (X(r.start) + X(r.end)) / 2;
+      T(svg, Math.min(Math.max(xm - 14, x0), 400), r.team === 1 ? 24 : 200, `${r.pts}-0`, { 'font-size': 13, fill: r.team === 1 ? '#1a6f94' : '#a24a0b' });
+    }
+  } else T(svg, x0 + 110, y0 - 14, 'the line starts at tip-off', { fill: PENCIL });
+  $('flow-note').textContent = `above the line = ${nm('1')} ahead · below = ${nm('2')} ahead · numbers = scoring runs of 8+`;
+}
+
+function renderZones() {
+  const rows = [];
+  for (const k of ['1', '2']) {
+    const t = S[k === '1' ? 'home' : 'away'], ref = preTeam(k)?.zones;
+    if (!t?.zones) continue;
+    for (const z of ZONES) {
+      const v = t.zones[z], r = ref?.[z];
+      const d = r && v.fga ? v.share - r.share : null;
+      const arrow = d == null || Math.abs(d) < 10 ? '' : d > 0 ? ' ↑' : ' ↓';
+      rows.push(`<tr><td class="n">${z === 'rim' ? `<span class="${k === '1' ? 'hl-cyan' : 'hl-orange'}">${esc(nm(k))}</span>` : ''}</td><td class="n">${ZL[z]}</td>
+        <td>${v.fgm}/${v.fga}</td><td class="${arrow ? (d > 0 ? 'up' : 'down') : ''}">${Math.round(v.share)}%${arrow}</td><td class="muted">${r ? Math.round(r.share) + '%' : '–'}</td>
+        <td>${v.pps == null ? '–' : v.pps.toFixed(2)}</td></tr>`);
+    }
+  }
+  $('zones').innerHTML = rows.length ? `<thead><tr><th class="n">Team</th><th class="n">Zone</th><th>FG</th><th>Share</th><th>Usually</th><th>Pts/shot</th></tr></thead><tbody>${rows.join('')}</tbody>`
+    : '<tbody><tr><td class="n muted">From tip-off.</td></tr></tbody>';
+}
+
+function renderStarts() {
+  const H = S.home?.starts, A = S.away?.starts;
+  if (!H || !A) { $('starts').innerHTML = '<tbody><tr><td class="n muted">From tip-off.</td></tr></tbody>'; return; }
+  const set = s => { const n = s.score.n + s.dead_to.n + s.period.n; const p = n ? (s.score.n * (s.score.ppp || 0) + s.dead_to.n * (s.dead_to.ppp || 0) + s.period.n * (s.period.ppp || 0)) / n : null; return { n, ppp: p }; };
+  const row = (lab, a, b) => `<tr><td class="n">${lab}</td><td>${a.n}</td><td>${a.ppp == null ? '–' : a.ppp.toFixed(2)}</td><td>${b.n}</td><td>${b.ppp == null ? '–' : b.ppp.toFixed(2)}</td></tr>`;
+  $('starts').innerHTML = `<thead><tr><th class="n"></th><th colspan="2"><span class="hl-cyan">${esc(nm('1'))}</span> poss · pts</th><th colspan="2"><span class="hl-orange">${esc(nm('2'))}</span> poss · pts</th></tr></thead><tbody>` +
+    row(START.live_to, H.live_to, A.live_to) + row(START.dreb, H.dreb, A.dreb) + row(START.set, set(H), set(A)) + row(START.early, H.early, A.early) + '</tbody>';
+}
+
+const surname = s => String(s).split('. ').pop();
+function fiveNames(k, five) {
+  const ps = S[k === 1 ? 'home' : 'away']?.players || [];
+  return five.map(p => surname(ps.find(x => x.pno === p)?.name || '#' + p)).join(', ');
+}
+function renderLineups() {
+  const rows = (S.lineups || []).slice(0, 10);
+  const onNow = k => JSON.stringify((S.on?.[k] || []).slice().sort((a, b) => a - b));
+  $('lineups').innerHTML = rows.length ? `<thead><tr><th class="n">Team</th><th class="n">Five</th><th>Poss</th><th>Pts</th><th>Net</th></tr></thead><tbody>` +
+    rows.map(r => `<tr class="${JSON.stringify(r.five) === onNow(String(r.team)) ? 'on' : ''}"><td class="n"><span class="${r.team === 1 ? 'hl-cyan' : 'hl-orange'}">${esc(nm(String(r.team)))}</span></td>
+      <td class="n wrap">${esc(fiveNames(r.team, r.five))}</td><td>${r.poss}</td><td>${r.pf}–${r.pa}</td><td class="${r.net > 0 ? 'up' : r.net < 0 ? 'down' : ''}">${sgn(r.net)}</td></tr>`).join('') + '</tbody>'
+    : '<tbody><tr><td class="n muted">Fives show up once they have played a few possessions together.</td></tr></tbody>';
+}
+function renderTos() {
+  const t = (S.timeouts || []).map(x => `<tr><td class="n">${esc(x.when)}</td><td class="n"><span class="${x.team === 1 ? 'hl-cyan' : 'hl-orange'}">${esc(nm(String(x.team)))}</span> timeout</td><td>${x.before[0]}–${x.before[1]}</td><td>${x.n_after ? x.after[0] + '–' + x.after[1] : '…'}</td></tr>`);
+  const r = (S.runs || []).map(x => `<tr><td class="n">${esc(x.from)}</td><td class="n"><span class="${x.team === 1 ? 'hl-cyan' : 'hl-orange'}">${esc(nm(String(x.team)))}</span> ${x.pts}–0 run</td><td colspan="2" class="muted">to ${esc(x.to)}</td></tr>`);
+  $('tos').innerHTML = t.length || r.length ? `<thead><tr><th class="n">When</th><th class="n">What</th><th>4 trips before</th><th>4 trips after</th></tr></thead><tbody>${[...t, ...r].join('')}</tbody>`
+    : '<tbody><tr><td class="n muted prose">Timeouts and 7+ point runs are logged here, with the score in the four possessions either side of each timeout.</td></tr></tbody>';
+}
+function renderBox(id, ps) {
+  const el = $(id);
+  if (!ps || !ps.length) { el.innerHTML = '<tbody><tr><td class="n muted">Box score appears at tip-off.</td></tr></tbody>'; return; }
+  el.innerHTML = `<thead><tr><th>#</th><th class="n">Player</th><th>Min</th><th>Pts</th><th>FG</th><th>3P</th><th>FT</th><th>Reb</th><th>Ast</th><th>TO</th><th>PF</th><th>On/off</th></tr></thead><tbody>` +
+    ps.map(p => `<tr class="${p.on ? 'on' : ''}"><td class="no">${esc(p.no)}</td><td class="n">${esc(p.name)}</td><td>${p.min}</td><td>${p.pts}</td><td>${p.fg}</td><td>${p.tp}</td><td>${p.ft}</td><td>${p.reb}</td><td>${p.ast}</td><td>${p.to}</td><td class="${p.pf >= 4 ? 'foul' : ''}">${p.pf}</td><td class="muted">${sgn(p.on_net)} / ${sgn(p.off_net)}</td></tr>`).join('') + '</tbody>';
+}
+
+/* ---------------- PREVIEW ---------------- */
+function renderPre() {
+  renderHeader();
+  if (!PRE) { $('keys').innerHTML = '<p class="empty">The preview is not ready yet.</p>'; return; }
+  const keys = (FEED.items || []).filter(e => e.tag === 'PRE');
+  $('keys').innerHTML = keys.length ? keys.map((e, i) => `<div class="key"><h3><span class="big">${i + 1}</span>${esc(e.title || '')}</h3><p>${md(e.text)}</p></div>`).join('')
+    : '<p class="empty">Scouting notes are added before tip-off.</p>';
+  seg($('pm-mode'), [['own', 'Where they shoot'], ['allowed', 'What they allow']], ui.pmMode, v => { ui.pmMode = v; renderPre(); });
+  for (const [k, side] of [['1', 'l'], ['2', 'r']]) {
+    const t = preTeam(k), svg = $('pm-' + side), rc = drawCourt(svg), own = ui.pmMode === 'own';
+    const zt = own ? t.zones : t.zones_allowed;
+    shadeZones(svg, rc, zt, TEAMC[k], PRE.league_zones ? Object.fromEntries(Object.entries(PRE.league_zones).map(([z, s]) => [z, { share: s }])) : null);
+    dots(svg, (own ? t.shots : t.shots_allowed).map(s => [s[0], s[1], s[2]]), own ? TEAMC[k] : RED);
+    $('pm-' + side + '-h').innerHTML = `<span class="${k === '1' ? 'hl-cyan' : 'hl-orange'}">${esc(nm(k))}</span> · ${own ? 'their shots' : 'opponents\' shots against them'} · ${t.n} games`;
+  }
+  $('pm-note').textContent = '● made · ○ missed. Zone labels: share of shots · FG%, with the league share ("usually") underneath. Shading = how often the zone is used.';
+  seg($('pp-team'), [['1', nm('1')], ['2', nm('2')]], ui.ppTeam, v => { ui.ppTeam = v; renderPre(); });
+  const t = preTeam(ui.ppTeam), k = +ui.ppTeam;
+  const pl = Object.entries(t.players).filter(([, p]) => p.fga >= 8).slice(0, 8);
+  $('pp-cards').innerHTML = pl.map(([n, p], i) => `<div class="card"><div class="nm">#${esc(p.no)} ${esc(n)}</div>
+      <div class="meta">${p.gp} games · ${p.min} min · ${p.fga} shots · ${p.inside}% in the paint · ${p.pps.toFixed(2)} pts/shot</div>
+      <svg id="ppc-${i}" viewBox="-20 -10 490 330" role="img" aria-label="Shot map for ${esc(n)}"></svg></div>`).join('');
+  pl.forEach(([n, p], i) => { const svg = $('ppc-' + i), rc = drawCourt(svg); dots(svg, p.shots, TEAMC[k]); });
+  const A = preTeam('1'), B = preTeam('2'), f = v => v == null ? '–' : v;
+  const rr = (lab, a, b) => `<tr><td class="n">${lab}</td><td>${f(a)}</td><td>${f(b)}</td></tr>`;
+  const set = s => { const n = s.score.n + s.dead_to.n; return n ? ((s.score.n * s.score.ppp + s.dead_to.n * (s.dead_to.ppp || 0)) / n).toFixed(2) : null; };
+  $('prof').innerHTML = `<thead><tr><th class="n"></th><th><span class="hl-cyan">${esc(nm('1'))}</span></th><th><span class="hl-orange">${esc(nm('2'))}</span></th></tr></thead><tbody>` +
+    rr('Games with full data', A.n, B.n) + rr('Possessions a game', A.pace, B.pace) + rr('Points per possession', A.ppp, B.ppp) + rr('Allowed per possession', A.opp_ppp, B.opp_ppp) +
+    rr('Pts/poss after a steal', A.starts.live_to.ppp, B.starts.live_to.ppp) + rr('Pts/poss vs set defence', set(A.starts), set(B.starts)) +
+    rr('Assisted baskets %', A.ast_rate, B.ast_rate) + rr('Own misses rebounded %', A.oreb_rate, B.oreb_rate) +
+    rr('Timeouts a game', A.timeouts.per_game, B.timeouts.per_game) +
+    rr('4 trips after own timeout', `${A.timeouts.after_for}–${A.timeouts.after_against}`, `${B.timeouts.after_for}–${B.timeouts.after_against}`) + '</tbody>';
+  const lu = [];
+  for (const k2 of ['1', '2']) {
+    const ls = (preTeam(k2).lineups || []).slice().sort((a, b) => b.net - a.net);
+    for (const r of [ls[0], ls[ls.length - 1]].filter(Boolean).filter((r, i, a) => a.indexOf(r) === i))
+      lu.push(`<tr><td class="n"><span class="${k2 === '1' ? 'hl-cyan' : 'hl-orange'}">${esc(nm(k2))}</span></td><td class="n wrap">${esc(r.five.map(x => x.split(' ').pop()).join(', '))}</td><td>${r.poss}</td><td>${r.pf}–${r.pa}</td><td class="${r.net > 0 ? 'up' : 'down'}">${sgn(r.net)}</td></tr>`);
+  }
+  $('pre-lineups').innerHTML = `<thead><tr><th class="n">Team</th><th class="n">Five</th><th>Poss</th><th>Pts</th><th>Net</th></tr></thead><tbody>${lu.join('')}</tbody>`;
+  $('foot-pre').textContent = `Built from FIBA LiveStats play-by-play of every earlier game with full data: ${A.games.map(g => g.opp).join(', ')} (${nm('1')}); ${B.games.map(g => g.opp).join(', ')} (${nm('2')}). Possessions are rebuilt from the event log; garbage time is included here.`;
+}
+
+/* ---------------- data loop ---------------- */
+async function getJSON(path) {
+  const r = await fetch(`${path}?t=${Date.now()}`, { cache: 'no-store' });
+  if (!r.ok) throw new Error(path + ' ' + r.status);
+  return r.json();
+}
+async function tick(first) {
+  const [pre, st, fd] = await Promise.allSettled([first || !PRE ? getJSON('data/pregame.json') : Promise.resolve(PRE), getJSON('data/live.json'), getJSON('data/feed.json')]);
+  if (pre.status === 'fulfilled') PRE = pre.value;
+  if (st.status === 'fulfilled') S = st.value;
+  if (fd.status === 'fulfilled') FEED = fd.value;
+  ui.tab === 'pre' ? renderPre() : renderLive();
+  if (first) showTab(ui.tab);
+}
+tick(true);
+setInterval(() => { if (S.status !== 'final' && !document.hidden) tick(false); }, 15000);
+document.addEventListener('visibilitychange', () => { if (!document.hidden) tick(false); });
+addEventListener('resize', () => { if (ui.tab !== 'pre') drawFlow(); });
+</script>
+</body>
+</html>
