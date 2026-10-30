@@ -504,6 +504,21 @@
    "ts": 1793383852,
    "team": 1,
    "evidence": "Žalgiris above-break 3P 4/22; rim 15/24; Grenda 4/6"
+  },
+  {
+   "when": "Q4 6:36",
+   "tag": "TIMEOUT",
+   "text": "Bardauskas calls his third timeout at 55–47, after an 8–5 Kretinga burst. **It's the Einikis problem again**: 25 points, 5/11 from three, eight since the last timeout's chance to change the coverage. Žalgiris's timeouts have stopped every run tonight. This one also needs a matchup answer, and probably Mackevičius back on the floor to restart the open-floor game Kretinga can't handle.",
+   "ts": 1793383965,
+   "evidence": "Einikis 8/17 FG, 5/11 3P, 25 pts. Žalgiris timeouts: after-4-trip scores 4–0, 5–0, 2–5. Mackevičius +65 per 100, on the bench since Q3"
+  },
+  {
+   "when": "Q4 6:36",
+   "tag": "ADVICE",
+   "text": "**Face-guard Einikis; make someone else shoot.** The rest of Kretinga are 7/35 outside the paint. And get Mackevičius back on to push.",
+   "ts": 1793383965,
+   "team": 1,
+   "evidence": "Einikis 25 pts, 5/11 3P; other Kretinga 3P 2/19"
   }
  ]
 }
