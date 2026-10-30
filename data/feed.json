@@ -42,6 +42,13 @@
    "ts": 1793370163,
    "title": "Žalgiris's timeouts stop runs",
    "evidence": "on/off samples ~170 possessions each, three games"
+  },
+  {
+   "when": "Pre-game",
+   "tag": "LINEUP",
+   "text": "Team sheets are in. Žalgiris are without **#4 Gasiūnas**, whose minutes had their best defensive numbers, so watch who Bardauskas trusts at the point of attack. Kretinga dress only nine, with #33 Mažeikis new to the rotation: on top of four starters who already play 32+ minutes, the pace question gets sharper.",
+   "ts": 1793378632,
+   "evidence": "Gasiūnas: Žalgiris allowed 68 per 100 with him on, 98 off (167 poss). Kretinga roster: 9 listed."
   }
  ]
 }
