@@ -219,7 +219,7 @@ tbody tr + tr td { border-top: 1px dotted var(--dot); }
     <div class="mod"><h2 class="title" id="bt-away">Away box</h2><div class="tbl-wrap"><table id="box-away"></table></div></div>
       </div>
     </details>
-    <div class="mod w12 foot" id="foot-live">Highlighted name = on the floor. On/off = team net per 100 possessions with the player on / off. Data: FIBA LiveStats, read every 20 seconds. The notebook is written by an AI analyst (Claude) from the play-by-play, so it can trail the arena by a minute or two.</div>
+    <div class="mod w12 foot" id="foot-live">Highlighted name = on the floor. On/off = team net per 100 possessions with the player on / off. Data: FIBA LiveStats, read every 10 seconds. The notebook is written by an AI analyst (Claude) from the play-by-play, so it can trail the arena by a minute or two.</div>
   </section>
 
   <!-- ============================ PREVIEW ============================ -->
@@ -605,7 +605,7 @@ async function tick(first) {
   if (first) showTab(ui.tab);
 }
 tick(true);
-setInterval(() => { if (S.status !== 'final' && !document.hidden) tick(false); }, 15000);
+setInterval(() => { if (S.status !== 'final' && !document.hidden) tick(false); }, 10000);
 document.addEventListener('visibilitychange', () => { if (!document.hidden) tick(false); });
 $('more').addEventListener('toggle', () => { store.set('more', $('more').open ? '1' : ''); drawFlow(); });
 if (store.get('more', '')) $('more').open = true;
