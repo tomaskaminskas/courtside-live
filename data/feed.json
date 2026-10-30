@@ -221,6 +221,21 @@
    "ts": 1793380669,
    "team": 2,
    "evidence": "Žalgiris own misses rebounded 8/15; set-defence offence 0.25 per possession"
+  },
+  {
+   "when": "Q2 6:20",
+   "tag": "MATCHUP",
+   "text": "Einikis normally lives in the lane, with 60% of his shots in the paint. Tonight it's one in six. **Žalgiris's help is sitting in his driving lanes**, so he's turned into a spot-up shooter, and he's made two. That's a fine result for Kretinga today, but a fragile one: it depends on a shot he usually misses.",
+   "ts": 1793380782,
+   "evidence": "Einikis paint share 17% tonight vs 60% before; 3P 2/5 tonight, 2/16 in earlier games"
+  },
+  {
+   "when": "Q2 6:20",
+   "tag": "ADVICE",
+   "text": "**Urbonas–Einikis two-man game**: ball screen with Einikis as the screener. If they help on the roll, Urbonas has his three; if not, Einikis catches downhill.",
+   "ts": 1793380782,
+   "team": 2,
+   "evidence": "Einikis shut out of the lane; Urbonas 0/2 from three, 1/4 overall"
   }
  ]
 }
