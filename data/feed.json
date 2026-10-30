@@ -49,6 +49,29 @@
    "text": "Team sheets are in. Žalgiris are without **#4 Gasiūnas**, whose minutes had their best defensive numbers, so watch who Bardauskas trusts at the point of attack. Kretinga dress only nine, with #33 Mažeikis new to the rotation: on top of four starters who already play 32+ minutes, the pace question gets sharper.",
    "ts": 1793378632,
    "evidence": "Gasiūnas: Žalgiris allowed 68 per 100 with him on, 98 off (167 poss). Kretinga roster: 9 listed."
+  },
+  {
+   "when": "Q1 9:43",
+   "tag": "LINEUP",
+   "text": "Mikaločius opens with his usual five, the group that is **slightly negative over a big sample** this season. Its problem is spacing: Bružas and Adomaitis both live in the paint, so Einikis drives into two bodies. The same four with Paulauskas, a pure shooter, have been clearly better.",
+   "ts": 1793379379,
+   "evidence": "Usual five: −5 per 100 over 168 poss. With Paulauskas for Bružas: +25 over 55. Paulauskas 7/18 from three, 0% of shots inside"
+  },
+  {
+   "when": "Q1 9:43",
+   "tag": "ADVICE",
+   "text": "**Push off every miss and every steal.** Žalgiris score 1.48 per possession early in the clock and 0.78 against a set defence.",
+   "ts": 1793379379,
+   "team": 1,
+   "evidence": "Season: 149 early-clock possessions at 1.48; 98 after opponent scores at 0.78"
+  },
+  {
+   "when": "Q1 9:43",
+   "tag": "ADVICE",
+   "text": "**Two back on every shot.** Kretinga's long misses are Žalgiris's best offence; win the pace and the half court is yours.",
+   "ts": 1793379379,
+   "team": 2,
+   "evidence": "Kretinga allow 1.12 per possession after a defensive rebound, 0.91 after a make"
   }
  ]
 }
