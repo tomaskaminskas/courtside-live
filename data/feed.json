@@ -302,6 +302,21 @@
    "text": "Žalgiris's half-court drought is **a making problem more than a selection problem**. Their shots are worth about 0.97 points at normal accuracy and they're getting 0.74. Raulušavičius is the example: he's getting into the paint far more than usual, but 1/7. Those looks usually fall. If they start to, a seven-point lead becomes a lot more.",
    "ts": 1793381452,
    "evidence": "Žalgiris expected 0.97 pts/shot, actual 0.74. Raulušavičius 86% of shots in the paint (52% before), 1/7 FG"
+  },
+  {
+   "when": "Q2 0:35",
+   "tag": "HIDDEN-IMPACT",
+   "text": "The quiet Žalgiris number of the half: **with Mackevičius at the point they score at a different level**, about 158 per 100 possessions, against 58 without him. His box line is two points; his value is pace. He's the one pushing it before Kretinga can set, which is the only offence that has worked for Žalgiris tonight.",
+   "ts": 1793381564,
+   "evidence": "Mackevičius on/off: +81 / +2 per 100; offence 158 on / 58 off (small sample, ~6 min). Žalgiris vs set defence 0.15 per possession"
+  },
+  {
+   "when": "Q2 0:35",
+   "tag": "ADVICE",
+   "text": "**Mackevičius plays more in the second half.** He's the one who gets you into the open floor before Kretinga set.",
+   "ts": 1793381564,
+   "team": 1,
+   "evidence": "+81 per 100 with him on; Žalgiris 1.28 in transition, 0.15 vs set defence"
   }
  ]
 }
