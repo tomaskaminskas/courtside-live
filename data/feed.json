@@ -467,6 +467,13 @@
    "ts": 1793383463,
    "team": 2,
    "evidence": "Kretinga rim 7/9; above-break 3P 5/26"
+  },
+  {
+   "when": "Q4 9:19",
+   "tag": "LINEUP",
+   "text": "Q4 lineups: Mikaločius goes for shooting, with **Paulauskas instead of Bruzdeilinas** alongside the four tired regulars and Urbonas back on with four fouls. Bardauskas keeps Mackevičius and Astrauskas resting and starts with Grenda plus bench guards. That gives Kretinga a window: the best Žalgiris pace-setter is on the bench, so the game can stay at a walk for a few minutes.",
+   "ts": 1793383626,
+   "evidence": "Kretinga: Urbonas, Einikis, Goriunovas, D. Adomaitis, Paulauskas. Žalgiris: Raulušavičius, Grenda, Ramanauskas, Jurkšaitis, Šiaulaitis"
   }
  ]
 }
