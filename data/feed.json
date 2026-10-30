@@ -236,6 +236,21 @@
    "ts": 1793380782,
    "team": 2,
    "evidence": "Einikis shut out of the lane; Urbonas 0/2 from three, 1/4 overall"
+  },
+  {
+   "when": "Q2 5:31",
+   "tag": "TIMEOUT",
+   "text": "Bardauskas stops it at 26–22, after a 7–2 Kretinga quarter. His timeouts have reliably stopped runs this season. The bigger lever is personnel: **Grenda and Astrauskas, his two best starters tonight, have both sat for over five minutes** while a bench group with no half-court scoring held the floor. Kretinga's spark has been Bruzdeilinas, who has no points but helps the spacing.",
+   "ts": 1793380894,
+   "evidence": "Žalgiris timeouts this season: 25–47 in the 4 trips before, 31–33 after. Grenda last on Q1 2:xx. Bruzdeilinas on/off +54 / −58"
+  },
+  {
+   "when": "Q2 5:31",
+   "tag": "ADVICE",
+   "text": "**Grenda and Astrauskas back now.** Out of the timeout, run a ball screen for Astrauskas with Grenda rolling; Kretinga's set defence has stopped everything else.",
+   "ts": 1793380894,
+   "team": 1,
+   "evidence": "Grenda 4/4 at the rim; Žalgiris 0.22 per possession against a set defence"
   }
  ]
 }
