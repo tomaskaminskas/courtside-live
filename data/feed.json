@@ -3,114 +3,45 @@
   {
    "when": "pre",
    "tag": "PRE",
-   "text": "65% of Vilniaus KM shots come at the rim or in the short paint, and only 16% are above-the-break threes, made at 13%. **Pack the paint and dare them.** Bagdonavičius takes 97% of his shots inside (1.43 points per shot); he is the one to wall off.",
-   "ts": 1793271019,
-   "title": "VKM don't shoot over you"
+   "text": "Žalgiris play at about 87 possessions a game, Kretinga 76. Žalgiris score **1.48 per possession when the shot comes in the first 8 seconds** and only 0.78 when they have to attack a set defence after a made basket. Kretinga's plan writes itself: good shots, get back, make Žalgiris play half court.",
+   "ts": 1793370162,
+   "title": "The pace fight"
   },
   {
    "when": "pre",
    "tag": "PRE",
-   "text": "VKM rebound **51% of their own misses**, the highest rate in this group. Against a team that won't beat you from outside, the real defensive job is the box-out after the first shot, not the first shot itself.",
-   "ts": 1793271019,
-   "title": "Their misses are a second chance"
+   "text": "Kretinga allow 1.12 points per possession after an opponent's defensive rebound, against 0.91 after their own made basket. Against the league's fastest-finishing team, **a long Kretinga miss is half a Žalgiris layup**. Watch how many Kretinga players crash and how many sprint back.",
+   "ts": 1793370163,
+   "title": "Kretinga's misses feed the break"
   },
   {
    "when": "pre",
    "tag": "PRE",
-   "text": "VKM allow only **0.66 points per possession after a made basket** but 1.24 after a steal. VKKM's turnovers are the hinge: opponents score 1.55 per possession after a VKKM live-ball turnover, about 14 such trips a game.",
-   "ts": 1793271019,
-   "title": "Make them play against a set defence"
+   "text": "Urbonas averages 39 of 40 minutes, Einikis 35, Goriunovas and Adomaitis 32. Žalgiris roll nine or ten players. Kretinga have won Q3 by +14 over three games but Q4 by only +3. **If Žalgiris keep the pace up, the last eight minutes are where depth shows.**",
+   "ts": 1793370163,
+   "title": "Four Kretinga starters barely sit"
   },
   {
    "when": "pre",
    "tag": "PRE",
-   "text": "VKKM are −40 in third quarters across four games; VKM are −16 in first quarters and **+75 over the other three**. Both trends point the same way: a close half-time is not a close game unless VKKM change something at the break.",
-   "ts": 1793271019,
-   "title": "Watch the third quarter"
+   "text": "Kretinga take 13% of their shots from the corners (league 6%) and make 48%. Žalgiris almost never give that shot up (5% of shots against them). **Whoever wins the corners wins Kretinga's half court**: if Žalgiris's helpers stay home, Kretinga must score at the rim, where Žalgiris allow 52%.",
+   "ts": 1793370163,
+   "title": "The corner three"
   },
   {
    "when": "pre",
    "tag": "PRE",
-   "text": "VKKM are +38 in 26 possessions with **Smailys** in the Gagilas–Skunsman–Januška–Raulušaitis five, but their most-used five (with Margevičius and Bieliauskas) is −21 over 84. For VKM, the team is +37 per 100 with **Valančius** on and +1 with him off, though he takes only 10 shots a game.",
-   "ts": 1793271019,
-   "title": "The players the box score misses"
+   "text": "Urbonas is 14/30 from three and scores 1.35 points per shot. Einikis takes as many shots (47) at 0.85, mostly drives, 2/16 from three. **A Žalgiris plan: top-lock Urbonas, go under screens for Einikis** and wall off the paint behind him.",
+   "ts": 1793370163,
+   "title": "Who takes Kretinga's shots"
   },
   {
    "when": "pre",
    "tag": "PRE",
-   "text": "Steponaitis (VKKM) calls 4.5 timeouts a game, usually in the middle of an opponent run (opponents 105–67 in the four trips before them), and the trips after them are still lost 55–62. Šležas (VKM) calls 2.3. **If VKM go on a run, the timeout comes fast**; whether it stops the run is the question.",
-   "ts": 1793271019,
-   "title": "Two benches, two habits"
-  },
-  {
-   "when": "Q4 5:57",
-   "tag": "MOMENTUM",
-   "text": "Šležas has his best five on the floor for the finish: Mileika, Šinkūnas, Norvaišas, Bliūdžius, Bilčius have **not been scored on** together. The 8–0 that cut this to three came from VKKM turnovers, not VKM shooting, and Steponaitis still hasn't used a timeout to break it.",
-   "ts": 1793289324,
-   "evidence": "That five: 8–0 over 17 possessions tonight. Q4 9:42–6:14: VKM 8–0, VKKM 4 turnovers + 4 misses"
-  },
-  {
-   "when": "Q4 5:57",
-   "tag": "BONUS",
-   "text": "Both teams are living at the rim tonight, far more than usual, and VKKM are already in the bonus. **Every VKM drive now is two free throws or a layup.** VKKM's answer has to be walls in the gap, not reaches, for six minutes.",
-   "ts": 1793289324,
-   "evidence": "Rim share: VKKM 56% (usually 32%), VKM 55% (usually 33%). VKKM 4 team fouls in Q4"
-  },
-  {
-   "when": "Q4 5:57",
-   "tag": "SHOT QUALITY",
-   "text": "VKM are behind on makes, not on looks: their shot locations should be worth a point a shot and they are getting about 0.7. **Norvaišas has played 21 straight minutes**; if Šležas wants fresh legs at the line for the last two minutes, the window is the next dead ball.",
-   "ts": 1793289392,
-   "evidence": "VKM expected 1.01 pts/shot from locations, actual 0.69. Norvaišas #40: 21 min without a break"
-  },
-  {
-   "when": "Q4 5:52",
-   "tag": "LINEUP",
-   "text": "Steponaitis has answered with personnel instead of a timeout. The Kurmis–Šalvis–Jasėnas–Budzinskas–Šilgalis group is VKKM's best five tonight, and **swapping Afanasjev and Liubinas out for Jasėnas and Šilgalis** is the change that has worked: the other version of this five has not scored.",
-   "ts": 1793289433,
-   "evidence": "Kurmis/Šalvis/Jasėnas/Budzinskas/Šilgalis 8–3 in 12 poss. With Afanasjev + Liubinas instead: 0–7 in 14"
-  },
-  {
-   "when": "Q4 4:23",
-   "tag": "GLASS",
-   "text": "With VKM missing makeable shots, their way back in is the offensive glass, and **Mileika is the one VKKM must find** on every shot. VKM's offence has gone one-on-one tonight, so a quick drive is likely; VKKM's weak-side guard has to put a body on Mileika before he chases the long rebound.",
-   "ts": 1793289643,
-   "evidence": "VKM 17 of 38 own misses back (45%), 12 second-chance pts; Mileika 7 offensive boards. Assisted baskets 30% (usually 63%)"
-  },
-  {
-   "when": "Q4 3:32",
-   "tag": "SHOT DIET",
-   "text": "Both sides are now in the bonus, and VKM's three-point option has disappeared: VKKM are running them off the arc and **funnelling everything to the rim**, where VKM's misses have come. Down four, VKM can't wait for threes; the bonus means attacking the body, not the help.",
-   "ts": 1793289730,
-   "evidence": "VKM above-the-break threes 0/10 (17% of shots, VKKM usually allow 38%). Rim share 57%. Both teams 4 fouls in Q4"
-  },
-  {
-   "when": "Q4 2:44",
-   "tag": "FOUL TROUBLE",
-   "text": "Mileika has four fouls and Šležas is keeping him on, which is the right call: **VKM are a different team without him**, and he is their offensive rebounder. The flip side is for VKKM: put him in pick-and-rolls and make him guard the ball on the drive.",
-   "ts": 1793289816,
-   "evidence": "Mileika #5: 4 fouls; VKM +7 per 100 with him on, −35 off. Norvaišas 24 straight minutes"
-  },
-  {
-   "when": "End Q4",
-   "tag": "PERIOD",
-   "text": "VKM erased five points in 50 seconds without Mileika, who fouled out at 1:26. They did it the same way as the Q4 8–0: **two VKKM ballhandling turnovers against pressure**, then Mickevičius's three with one second left. Steponaitis has to decide who brings the ball up in overtime; VKM will press again.",
-   "ts": 1793290382,
-   "evidence": "Last 1:26: VKKM 2 turnovers (Žarinskas 0:55, Jasėnas 0:21), 1 shot. Mickevičius: steal + 2 FT + tying 3. Mickevičius was −30 per 100 on/off before the finish"
-  },
-  {
-   "when": "OT1 1:32",
-   "tag": "ROTATION",
-   "text": "With Mileika gone, VKM's offence has become **Mickevičius, almost every time down**, and Norvaišas has now played 30 minutes without sitting. VKKM know where the ball is going: shade help toward Mickevičius's drive and make anyone else take the last shot.",
-   "ts": 1793290752,
-   "evidence": "Mickevičius 5 of VKM's last 8 shots (10 possessions). Norvaišas #40: 30 straight minutes"
-  },
-  {
-   "when": "Final OT",
-   "tag": "PERIOD",
-   "text": "VKKM win 76–74 after overtime. Three things decided it. VKKM **lost the ball under pressure late** and nearly gave the game away twice. Mickevičius drew the help we flagged and passed for the go-ahead three, but the last VKM shot went to Šinkūnas, not him. And Norvaišas's offensive foul came after 30-plus minutes without a rest.",
-   "ts": 1793291176,
-   "evidence": "VKKM turnovers in the last 1:26 of Q4 + OT: 4. Kurmis go-ahead 2 at 0:10 (Budzinskas assist); Žarinskas blocked Šinkūnas at 0:02"
+   "text": "In the four possessions before a Žalgiris timeout they have been outscored 25–47 this season; in the four after, 31–33. **This bench uses timeouts to reset, and it works.** On the other side, Gasiūnas (+61 per 100 on court) and Grenda (+44) are the defence-first players whose minutes matter most.",
+   "ts": 1793370163,
+   "title": "Žalgiris's timeouts stop runs",
+   "evidence": "on/off samples ~170 possessions each, three games"
   }
  ]
 }
