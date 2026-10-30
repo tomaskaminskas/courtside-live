@@ -206,6 +206,21 @@
    "ts": 1793380554,
    "team": 1,
    "evidence": "0.25 pts per possession against a set defence"
+  },
+  {
+   "when": "Q2 7:09",
+   "tag": "ADJUSTMENT",
+   "text": "Kretinga have taken the rim away. **Žalgiris's last twelve shots are mostly from outside**, after nearly two-thirds came inside early on, and they haven't scored for over three minutes. Mikaločius's five with Bruzdeilinas in place of Bružas has done it: 5–0 so far. The offensive rebounds (8 of 15) are what's still keeping Žalgiris alive.",
+   "ts": 1793380669,
+   "evidence": "Žalgiris last 12 shots 42% in the paint (64% before). Five with Bruzdeilinas: 5–0 in 11 poss. Žalgiris OREB 8/15, K. Adomaitis 3"
+  },
+  {
+   "when": "Q2 7:09",
+   "tag": "ADVICE",
+   "text": "**Hit the glass with a body, not a jump**: box out K. Adomaitis. Žalgiris's half court only scores off second chances right now.",
+   "ts": 1793380669,
+   "team": 2,
+   "evidence": "Žalgiris own misses rebounded 8/15; set-defence offence 0.25 per possession"
   }
  ]
 }
