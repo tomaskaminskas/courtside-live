@@ -295,6 +295,13 @@
    "ts": 1793381340,
    "team": 1,
    "evidence": "Kretinga above-break 3P 3/12; last 12 shots 50% in the paint"
+  },
+  {
+   "when": "Q2 1:31",
+   "tag": "SHOT-QUALITY",
+   "text": "Žalgiris's half-court drought is **a making problem more than a selection problem**. Their shots are worth about 0.97 points at normal accuracy and they're getting 0.74. Raulušavičius is the example: he's getting into the paint far more than usual, but 1/7. Those looks usually fall. If they start to, a seven-point lead becomes a lot more.",
+   "ts": 1793381452,
+   "evidence": "Žalgiris expected 0.97 pts/shot, actual 0.74. Raulušavičius 86% of shots in the paint (52% before), 1/7 FG"
   }
  ]
 }
