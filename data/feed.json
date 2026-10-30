@@ -191,6 +191,21 @@
    "ts": 1793380389,
    "team": 2,
    "evidence": "Urbonas 10:00 straight, averages 39 min; Kretinga Q4 net only +3 this season"
+  },
+  {
+   "when": "Q2 8:35",
+   "tag": "TRANSITION",
+   "text": "The clearest number of the night: **Žalgiris score 1.38 per trip when they run, 0.25 when Kretinga's defence is set**. Every Žalgiris point so far has come before Kretinga could match up. That is the pre-game scout exactly, and it means Kretinga's offence is also their defence: a made shot or a dead ball is worth more than it looks.",
+   "ts": 1793380554,
+   "evidence": "Žalgiris after a steal or defensive rebound: 16 poss, 1.38 pts. Against a set defence: 8 poss, 0.25"
+  },
+  {
+   "when": "Q2 8:35",
+   "tag": "ADVICE",
+   "text": "**Inbound fast after Kretinga makes.** Your half court is 2 points in 8 trips; the quick outlet is your best set.",
+   "ts": 1793380554,
+   "team": 1,
+   "evidence": "0.25 pts per possession against a set defence"
   }
  ]
 }
