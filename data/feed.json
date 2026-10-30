@@ -161,6 +161,21 @@
    "ts": 1793380162,
    "team": 2,
    "evidence": "Kretinga 3P 2/8; rim 1/3; Žalgiris bench five on"
+  },
+  {
+   "when": "Q1 1:13",
+   "tag": "ADJUSTMENT",
+   "text": "The story of Q1 is a Žalgiris scheme on both ends. On defence they're **packing the paint and conceding the top of the arc**: Kretinga have taken half their shots from above the break and none from the short paint, the opposite of how Žalgiris usually defend. On offence they've cut their own threes and gone to the rim, 7/8 there.",
+   "ts": 1793380275,
+   "evidence": "Kretinga above-break 3s: 50% of shots (Žalgiris usually allow 22%), paint 0%. Žalgiris rim 7/8; their own above-break 3 share 28% vs 44% usual"
+  },
+  {
+   "when": "Q1 1:13",
+   "tag": "ADVICE",
+   "text": "**Stay packed, but run them off the corner.** Concede the above-break three; Kretinga have already hit one of three from the corners, their best spot.",
+   "ts": 1793380275,
+   "team": 1,
+   "evidence": "Kretinga corner 3: 48% in earlier games, 1/3 tonight; above-break 1/6"
   }
  ]
 }
