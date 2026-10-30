@@ -124,6 +124,13 @@
    "ts": 1793379824,
    "team": 2,
    "evidence": "4 turnovers in 11 possessions; Žalgiris 2.0 pts per possession after steals"
+  },
+  {
+   "when": "Q1 4:42",
+   "tag": "ROTATION",
+   "text": "Out of the timeout Mikaločius made his first change: **Jedenkus in for Bružas**. That swap gives Kretinga their best-scoring five of the season, with one more ball-handler and less traffic in the paint for Einikis to drive into. Small sample, but it answers both problems: the turnovers and the spacing.",
+   "ts": 1793379937,
+   "evidence": "Urbonas–Adomaitis–Einikis–Jedenkus–Goriunovas: +100 per 100 over 30 poss this season. Usual five with Bružas: −5 over 168"
   }
  ]
 }
