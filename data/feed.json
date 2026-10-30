@@ -109,6 +109,21 @@
    "ts": 1793379716,
    "team": 1,
    "evidence": "Žalgiris 0 pts in 3 possessions after Kretinga makes"
+  },
+  {
+   "when": "Q1 5:14",
+   "tag": "TIMEOUT",
+   "text": "Mikaločius calls his first timeout at 15–8, and the fix is simple to name: **four turnovers in eleven trips**, the fuel for every Žalgiris run. Kretinga's half-court defence has done its job (Žalgiris 0 points after Kretinga makes). Protect the ball and this is an even game.",
+   "ts": 1793379824,
+   "evidence": "Kretinga TOs 4 (Goriunovas 2, Bružas, Urbonas). Žalgiris after a Kretinga make: 3 poss, 0 pts"
+  },
+  {
+   "when": "Q1 5:14",
+   "tag": "ADVICE",
+   "text": "**Two ball-handlers against the pressure**: bring Einikis back to receive the inbound so the first pass is never into a trap.",
+   "ts": 1793379824,
+   "team": 2,
+   "evidence": "4 turnovers in 11 possessions; Žalgiris 2.0 pts per possession after steals"
   }
  ]
 }
