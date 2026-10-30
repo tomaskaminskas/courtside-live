@@ -94,6 +94,21 @@
    "ts": 1793379601,
    "team": 2,
    "evidence": "Urbonas 0 FGA; Einikis 2 of Kretinga's 3 shots"
+  },
+  {
+   "when": "Q1 5:43",
+   "tag": "SHOT-DIET",
+   "text": "Two very different shot diets. Žalgiris are 5/5 inside and 1/3 outside; **Kretinga have taken one shot at the rim**, and everything else from three. Kretinga are winning the possessions after their own makes, so when the game slows down, Žalgiris's half court stalls. The open floor is where Žalgiris are scoring.",
+   "ts": 1793379716,
+   "evidence": "Žalgiris rim+paint 5/5, 3P 1/3; after a Kretinga make: 3 poss, 0 pts. Kretinga: 1 rim attempt of 5 shots"
+  },
+  {
+   "when": "Q1 5:43",
+   "tag": "ADVICE",
+   "text": "**In the half court, drive before the first three.** You're 5/5 inside and Kretinga have one big; make him guard two.",
+   "ts": 1793379716,
+   "team": 1,
+   "evidence": "Žalgiris 0 pts in 3 possessions after Kretinga makes"
   }
  ]
 }
