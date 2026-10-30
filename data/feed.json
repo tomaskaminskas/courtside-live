@@ -377,6 +377,21 @@
    "ts": 1793382795,
    "team": 1,
    "evidence": "Raulušavičius 6 of last 11 shots, 3/13; Grenda 4/5"
+  },
+  {
+   "when": "Q3 5:22",
+   "tag": "FOUL-TROUBLE",
+   "text": "Urbonas picks up his **fourth foul with 15 minutes left** and stays on. That's a defensible call from Mikaločius at 13 down, since Kretinga need his shooting to come back. The risk is that he now can't defend Žalgiris's drives without fouling out, and he has played every second. The bright spot: Kretinga are 6/8 at the rim and 4/25 everywhere else. The answer is in the paint.",
+   "ts": 1793382905,
+   "evidence": "Urbonas 4 PF, 24:36 straight. Kretinga rim 6/8, all other FG 4/30"
+  },
+  {
+   "when": "Q3 5:22",
+   "tag": "ADVICE",
+   "text": "**Hide Urbonas on the weakest Žalgiris wing** and attack the rim every trip: you're 6/8 there and 4/30 elsewhere.",
+   "ts": 1793382906,
+   "team": 2,
+   "evidence": "Urbonas 4 fouls; Kretinga rim 6/8"
   }
  ]
 }
