@@ -549,6 +549,29 @@
    "ts": 1793384215,
    "team": 1,
    "evidence": "Two Žalgiris turnovers in 20 seconds; Mackevičius +56 on court"
+  },
+  {
+   "when": "Q4 3:39",
+   "tag": "MOMENTUM",
+   "text": "Seventeen points down early in Q3, three down now. **Einikis has 32**, Kretinga have won Q4 19–11, and Mikaločius's Q4 five with Paulauskas is 19–11 together. The pre-game worry about Kretinga's legs hasn't shown up: Žalgiris's closers have scored 2 points in four trips since their timeout. Mikaločius takes his timeout here to set up the last 3½ minutes.",
+   "ts": 1793384316,
+   "evidence": "Einikis 10/19, 6/12 3P, 32 pts. Q4: 11–19. Paulauskas five 19–11 in 26 poss. Žalgiris after Q4 6:36 timeout: 2–6"
+  },
+  {
+   "when": "Q4 3:39",
+   "tag": "ADVICE",
+   "text": "**Two on Einikis whenever he touches it.** Trap him off the first screen and make Urbonas (2/11) or Goriunovas (1/5) take the shot.",
+   "ts": 1793384316,
+   "team": 1,
+   "evidence": "Einikis 32 pts; Urbonas 2/11, Goriunovas 1/5"
+  },
+  {
+   "when": "Q4 3:39",
+   "tag": "ADVICE",
+   "text": "**Same five, same action: Einikis off a ball screen.** And keep fouling only after the first pass, so you're not in the bonus too early.",
+   "ts": 1793384316,
+   "team": 2,
+   "evidence": "Kretinga 1 team foul in Q4; Paulauskas five 19–11"
   }
  ]
 }
