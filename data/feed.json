@@ -519,6 +519,21 @@
    "ts": 1793383965,
    "team": 1,
    "evidence": "Einikis 25 pts, 5/11 3P; other Kretinga 3P 2/19"
+  },
+  {
+   "when": "Q4 5:30",
+   "tag": "ROTATION",
+   "text": "Bardauskas went to his closers out of the timeout: **Mackevičius and Astrauskas back with Grenda**, and the bleeding stopped at 2–2. Kretinga's 7–0 burst came with Žalgiris's bench guards on the floor. It's an 8-point game with 5½ minutes left. Kretinga's top four have played 24–33 straight minutes; Žalgiris are fresh.",
+   "ts": 1793384076,
+   "evidence": "Kretinga 7–0 run Q4 7:15–5:59. After Žalgiris timeout Q4 6:36: 2–2. Kretinga team fouls in Q4: 1"
+  },
+  {
+   "when": "Q4 5:30",
+   "tag": "ADVICE",
+   "text": "**You have fouls to give: pressure the inbound and the first dribble.** Only one team foul this quarter; make Žalgiris's guards earn every entry.",
+   "ts": 1793384077,
+   "team": 2,
+   "evidence": "Kretinga 1 team foul in Q4; Žalgiris 4/12 TO-prone guards earlier (steals → points both ways)"
   }
  ]
 }
