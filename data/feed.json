@@ -444,6 +444,29 @@
    "text": "**Urbonas finally sits, after 28½ straight minutes** and with four fouls: the rest I suggested at the end of Q1, arriving late. It's the right moment, though. The minute before the break plus the interval gives him about three real minutes off before a Q4 Kretinga need him for. Einikis and Goriunovas are close to 20 straight as well.",
    "ts": 1793383350,
    "evidence": "Urbonas 28:36 straight, 4 PF, 7 TO. Einikis 19 straight min, Goriunovas 20"
+  },
+  {
+   "when": "End Q3",
+   "tag": "PERIOD",
+   "text": "Žalgiris 48–37 with ten to play. Kretinga edged Q3 12–11 after falling 17 behind, and **Mikaločius found his answer during the quarter**: the Bruzdeilinas five (+9 tonight) and drives instead of threes. Žalgiris's 11-point cushion comes from the end of the first half. For Q4, it comes down to legs and choices. Kretinga's top three have each played 20+ minutes straight. Žalgiris have rested everyone, but they need either the open floor back or Grenda touches in the half court (just 0.38 points per set possession tonight).",
+   "ts": 1793383463,
+   "evidence": "Q3: 11–12. Bruzdeilinas five 15–6 in 28 poss. Kretinga rim 7/9, above-break 3P 5/26. Žalgiris vs set defence 0.38 (21 poss), Grenda 4/5 and on the bench since Q3 6:00"
+  },
+  {
+   "when": "End Q3",
+   "tag": "ADVICE",
+   "text": "**Start Q4 with Grenda and Mackevičius**, and press after every make. Fresh legs against a tired Kretinga backcourt is your edge.",
+   "ts": 1793383463,
+   "team": 1,
+   "evidence": "Goriunovas 21 and Einikis 20 straight minutes; Mackevičius +65 on court"
+  },
+  {
+   "when": "End Q3",
+   "tag": "ADVICE",
+   "text": "**Drive, kick, drive.** 7/9 at the rim, 5/26 from above the break. Every possession needs a paint touch before a shot.",
+   "ts": 1793383463,
+   "team": 2,
+   "evidence": "Kretinga rim 7/9; above-break 3P 5/26"
   }
  ]
 }
