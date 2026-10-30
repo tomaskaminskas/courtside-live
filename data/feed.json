@@ -489,6 +489,21 @@
    "ts": 1793383739,
    "team": 2,
    "evidence": "D. Adomaitis 2/4, Kretinga rim 7/9; guards 21–30 straight min"
+  },
+  {
+   "when": "Q4 7:29",
+   "tag": "TRANSITION",
+   "text": "Ten down with 7½ minutes left gives Kretinga about fifteen possessions. The maths of tonight says how: **after a Kretinga basket, Žalgiris have scored 2 points in 15 possessions**. Every Kretinga make is also a stop. Einikis has 20 points and is now the trusted shooter; Urbonas (2/10) is playing on four fouls more for his defence and passing.",
+   "ts": 1793383852,
+   "evidence": "Žalgiris after a Kretinga make: 15 poss, 0.13 pts. Einikis 6/15, 4/10 from three. Urbonas 2/10"
+  },
+  {
+   "when": "Q4 7:29",
+   "tag": "ADVICE",
+   "text": "**Use the shot clock and play through Grenda.** Bleed the clock; no early threes. You're 4/22 from above the break, 15/24 at the rim.",
+   "ts": 1793383852,
+   "team": 1,
+   "evidence": "Žalgiris above-break 3P 4/22; rim 15/24; Grenda 4/6"
   }
  ]
 }
