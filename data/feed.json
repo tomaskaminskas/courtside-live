@@ -594,6 +594,29 @@
    "ts": 1793384499,
    "team": 1,
    "evidence": "Einikis 35 pts, 7 of last 9 Kretinga shots; Urbonas 2/11"
+  },
+  {
+   "when": "Q4 0:49",
+   "tag": "MOMENTUM",
+   "text": "**Mackevičius's three puts Žalgiris up 62–59**, a catch on the weak side while the defence leaned toward the paint, followed by a Kretinga turnover. Kretinga need a three. The whole gym knows Einikis takes it, so the action matters more than the shooter: a screen for him with Paulauskas spotting up as the release valve.",
+   "ts": 1793384590,
+   "evidence": "Mackevičius 1/3 from three before this. Kretinga 2 team fouls in Q4: three fouls to give before free throws"
+  },
+  {
+   "when": "Q4 0:49",
+   "tag": "ADVICE",
+   "text": "**Defend first. You have three fouls to give**, so use them to burn Žalgiris's clock, then foul once you're in the bonus.",
+   "ts": 1793384590,
+   "team": 2,
+   "evidence": "Kretinga 2 team fouls in Q4; down 3 with 0:49"
+  },
+  {
+   "when": "Q4 0:49",
+   "tag": "ADVICE",
+   "text": "**Switch everything on Einikis and no fouls on a three.** Make anyone else beat you, and take the two at the line.",
+   "ts": 1793384590,
+   "team": 1,
+   "evidence": "Einikis 35 pts, 7/14 3P; up 3 with 0:49"
   }
  ]
 }
