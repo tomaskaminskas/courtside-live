@@ -347,6 +347,21 @@
    "text": "Both benches restart with their starters. Bardauskas brings back **Mackevičius at the point with Grenda and Astrauskas**, the group that set the pace in Q1. Mikaločius stays with the five that is 11–22 tonight. Its season record says it's roughly even, so this is a bet that the first half was noise. Urbonas starts having never sat.",
    "ts": 1793382572,
    "evidence": "Žalgiris five Adomaitis–Raulušavičius–Mackevičius–Grenda–Astrauskas: 9–5 in Q1. Kretinga starting five: 11–22 in 40 poss tonight, −5 per 100 over 168 this season"
+  },
+  {
+   "when": "Q3 7:40",
+   "tag": "MOMENTUM",
+   "text": "An 11–0 Žalgiris run across half-time, and this one isn't turnovers: **eight straight Kretinga misses, mostly threes**, each one a long rebound that Mackevičius runs off. The Žalgiris starting five is now 13–5 together. Kretinga haven't called a timeout, and their best shooter has been on the court for all 22 minutes and is 2/9.",
+   "ts": 1793382683,
+   "evidence": "Run Q2 1:31 → Q3 7:59: Kretinga 0 TO, 8 missed FGA. Kretinga above-break 3P 3/21. Urbonas 22:00 straight"
+  },
+  {
+   "when": "Q3 7:40",
+   "tag": "ADVICE",
+   "text": "**Timeout now, and sit Urbonas for two minutes.** Come back with the Bruzdeilinas five and a post touch for Adomaitis before any shot.",
+   "ts": 1793382683,
+   "team": 2,
+   "evidence": "11–0 run, 8 straight misses; Urbonas 22 min, 2/9; Bruzdeilinas five 5–2"
   }
  ]
 }
