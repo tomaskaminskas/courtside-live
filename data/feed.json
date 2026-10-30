@@ -407,6 +407,21 @@
    "ts": 1793383018,
    "team": 1,
    "evidence": "Žalgiris 1.21 per possession in transition, 0.12 against a set defence"
+  },
+  {
+   "when": "Q3 3:37",
+   "tag": "TIMEOUT",
+   "text": "Bardauskas takes a timeout at 44–32, and Einikis is the reason. The pre-game bet was to go under screens and let him shoot. **He's now 3/9 from three and has 17 of Kretinga's 32 points.** One good night from a 13% shooter isn't a trend, but at this point it's a scoring source the scheme is choosing to allow. The timeout is the moment to change who guards him and how.",
+   "ts": 1793383129,
+   "evidence": "Einikis 5/13 FG, 3/9 3P, 17 pts (2/16 from three in earlier games). Kretinga last 3 min: 5–2"
+  },
+  {
+   "when": "Q3 3:37",
+   "tag": "ADVICE",
+   "text": "**Change the Einikis coverage: over the screen, hand in his face.** Make him drive into the packed paint instead.",
+   "ts": 1793383130,
+   "team": 1,
+   "evidence": "Einikis 3/9 from three tonight, 17 pts"
   }
  ]
 }
