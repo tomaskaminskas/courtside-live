@@ -317,6 +317,29 @@
    "ts": 1793381564,
    "team": 1,
    "evidence": "+81 per 100 with him on; Žalgiris 1.28 in transition, 0.15 vs set defence"
+  },
+  {
+   "when": "Half-time",
+   "tag": "PERIOD",
+   "text": "Žalgiris 37–25 at the half, and the split is stark. **When Kretinga's defence is set, Žalgiris have scored 2 points in 13 trips.** Everything else came off steals, long rebounds and second chances. So Kretinga aren't being outplayed in the half court; they're being punished for what happens before it. Their own offence has been Žalgiris's gift: 3/17 from above the break, the exact shot the scheme concedes. Kretinga have won Q3 by 14 on average this season. To repeat that they need fewer turnovers, a rested Urbonas (20 straight minutes, 3 fouls), and a paint touch before every three.",
+   "ts": 1793381678,
+   "evidence": "Žalgiris: 1.35 per possession in transition (26 poss), 0.15 vs set defence (13). Kretinga: 7 steals → 11 Žalgiris pts; above-break 3P 3/17; expected 0.90 per shot, actual 0.67"
+  },
+  {
+   "when": "Half-time",
+   "tag": "ADVICE",
+   "text": "**Paint touch before any three.** Your half-court defence is winning; to make it count, stop gifting transition with quick threes and loose passes.",
+   "ts": 1793381678,
+   "team": 2,
+   "evidence": "Kretinga above-break 3P 3/17; Žalgiris 0.15 per possession vs your set defence"
+  },
+  {
+   "when": "Half-time",
+   "tag": "ADVICE",
+   "text": "**Keep the shell, keep running.** Kretinga will try to drive in Q3: two in the lane, and outlet before they get back.",
+   "ts": 1793381678,
+   "team": 1,
+   "evidence": "Kretinga in-paint shots 17% of last 12; Žalgiris 1.35 in transition"
   }
  ]
 }
