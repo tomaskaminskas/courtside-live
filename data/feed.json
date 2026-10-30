@@ -131,6 +131,21 @@
    "text": "Out of the timeout Mikaločius made his first change: **Jedenkus in for Bružas**. That swap gives Kretinga their best-scoring five of the season, with one more ball-handler and less traffic in the paint for Einikis to drive into. Small sample, but it answers both problems: the turnovers and the spacing.",
    "ts": 1793379937,
    "evidence": "Urbonas–Adomaitis–Einikis–Jedenkus–Goriunovas: +100 per 100 over 30 poss this season. Usual five with Bružas: −5 over 168"
+  },
+  {
+   "when": "Q1 3:15",
+   "tag": "SHOT-QUALITY",
+   "text": "The timeout hasn't moved the needle: four trips out of it, no points. The ball security is better; **the shot selection isn't**. Eight of Kretinga's ten shots are threes, and Žalgiris are happy to let them have that. A team with one rim attempt in seven minutes is living on the coldest part of its game.",
+   "ts": 1793380047,
+   "evidence": "Kretinga FG 2/10, 3P 2/8, rim 0/1. After their timeout: 0–4 over 4 trips each"
+  },
+  {
+   "when": "Q1 3:15",
+   "tag": "ADVICE",
+   "text": "**Kretinga are in the bonus at 4 fouls**: drive at the closeouts and every reach is two free throws.",
+   "ts": 1793380047,
+   "team": 1,
+   "evidence": "Kretinga 4 team fouls, 3:15 left in Q1"
   }
  ]
 }
