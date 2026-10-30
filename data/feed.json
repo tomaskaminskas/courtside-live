@@ -534,6 +534,21 @@
    "ts": 1793384077,
    "team": 2,
    "evidence": "Kretinga 1 team foul in Q4; Žalgiris 4/12 TO-prone guards earlier (steals → points both ways)"
+  },
+  {
+   "when": "Q4 4:58",
+   "tag": "TURNOVERS",
+   "text": "It's now Žalgiris giving the ball away: **a three-second violation and two free throws for Kretinga**, and it's a six-point game. Kretinga's pressure on the first dribble is doing what Žalgiris's did in the first half. This is where Žalgiris's fresh legs should matter, but only if the ball goes to the guard who handles pressure best.",
+   "ts": 1793384215,
+   "evidence": "Žalgiris TOs Q4 5:25–5:08 (3 sec). Kretinga 2/2 FT at 4:58. Score 57–51; Q4 so far 9–14"
+  },
+  {
+   "when": "Q4 4:58",
+   "tag": "ADVICE",
+   "text": "**Ball in Mackevičius's hands, four out, one in.** Spread the floor against the pressure and attack the closeout; no post entries into a crowd.",
+   "ts": 1793384215,
+   "team": 1,
+   "evidence": "Two Žalgiris turnovers in 20 seconds; Mackevičius +56 on court"
   }
  ]
 }
