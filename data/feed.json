@@ -280,6 +280,21 @@
    "text": "Mikaločius's second timeout, and a curious choice out of it: **back to the starting five with Bružas**, the group that has been outscored 8–15 tonight, with Bruzdeilinas to the bench. The five with Bruzdeilinas is the only Kretinga group ahead. Expect Žalgiris to go straight back to pressure on the inbound.",
    "ts": 1793381228,
    "evidence": "Starting five: 8–15 in 23 poss tonight (−5 per 100 over 168 this season). Bruzdeilinas five: 5–2 in 11"
+  },
+  {
+   "when": "Q2 2:36",
+   "tag": "ADJUSTMENT",
+   "text": "Kretinga have changed how they attack: **half of their last twelve shots came in the paint**, after a quarter of the earlier ones. Bružas, a paint player, is 2/2, so the starting five makes more sense now that the ball is going inside rather than around the arc. Žalgiris, meanwhile, have scored two points in twelve half-court possessions all night.",
+   "ts": 1793381339,
+   "evidence": "Kretinga last 12 shots: 50% paint (25% before). Bružas 2/2. Žalgiris vs set defence: 12 poss, 0.17 pts"
+  },
+  {
+   "when": "Q2 2:36",
+   "tag": "ADVICE",
+   "text": "**Collapse on the drive again**: Kretinga have started getting into the paint. Make them beat you from the top of the arc, where they're 3/12.",
+   "ts": 1793381340,
+   "team": 1,
+   "evidence": "Kretinga above-break 3P 3/12; last 12 shots 50% in the paint"
   }
  ]
 }
