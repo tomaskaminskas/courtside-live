@@ -474,6 +474,21 @@
    "text": "Q4 lineups: Mikaločius goes for shooting, with **Paulauskas instead of Bruzdeilinas** alongside the four tired regulars and Urbonas back on with four fouls. Bardauskas keeps Mackevičius and Astrauskas resting and starts with Grenda plus bench guards. That gives Kretinga a window: the best Žalgiris pace-setter is on the bench, so the game can stay at a walk for a few minutes.",
    "ts": 1793383626,
    "evidence": "Kretinga: Urbonas, Einikis, Goriunovas, D. Adomaitis, Paulauskas. Žalgiris: Raulušavičius, Grenda, Ramanauskas, Jurkšaitis, Šiaulaitis"
+  },
+  {
+   "when": "Q4 8:34",
+   "tag": "SHOT-DIET",
+   "text": "Kretinga are back to the shot Žalgiris want them taking. **Twenty-eight of their 47 shots have come from above the break**, nearly three times what Žalgiris usually allow, and they've made five. Kretinga's rim game has worked whenever they used it (7/9), but it needs a driver with fresh legs, and the three who drive have all played 21+ straight minutes.",
+   "ts": 1793383739,
+   "evidence": "Kretinga above-break 3P 5/28 (61% of FGA; Žalgiris usually allow 22%). Rim 7/9. Goriunovas 22, Einikis 21, Urbonas 30 min"
+  },
+  {
+   "when": "Q4 8:34",
+   "tag": "ADVICE",
+   "text": "**Post Adomaitis and play from the inside out.** It's a rest possession for the tired guards, and it pulls Žalgiris's help into the lane.",
+   "ts": 1793383739,
+   "team": 2,
+   "evidence": "D. Adomaitis 2/4, Kretinga rim 7/9; guards 21–30 straight min"
   }
  ]
 }
