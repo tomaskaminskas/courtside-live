@@ -392,6 +392,21 @@
    "ts": 1793382906,
    "team": 2,
    "evidence": "Urbonas 4 fouls; Kretinga rim 6/8"
+  },
+  {
+   "when": "Q3 4:28",
+   "tag": "TRANSITION",
+   "text": "The game has slowed down, and that suits Kretinga's defence: **Žalgiris have scored 2 points in 16 half-court possessions all night**, and three empty minutes now. Kretinga's half court has been only slightly better. The lead holds because the runs came earlier. If Kretinga keep the game at a walk and keep attacking the rim, 13 points over 14 minutes is still reachable.",
+   "ts": 1793383017,
+   "evidence": "Žalgiris vs set defence: 16 poss, 0.12 pts. Last 3 min: Kretinga 4, Žalgiris 0"
+  },
+  {
+   "when": "Q3 4:28",
+   "tag": "ADVICE",
+   "text": "**Speed it back up**: full-court pressure after made free throws and timeouts. Your half court is 2 points in 16 trips; the open floor is your offence.",
+   "ts": 1793383018,
+   "team": 1,
+   "evidence": "Žalgiris 1.21 per possession in transition, 0.12 against a set defence"
   }
  ]
 }
