@@ -422,6 +422,21 @@
    "ts": 1793383130,
    "team": 1,
    "evidence": "Einikis 3/9 from three tonight, 17 pts"
+  },
+  {
+   "when": "Q3 2:09",
+   "tag": "LINEUP",
+   "text": "The lineup story is now clear. **With Bruzdeilinas in place of Bružas, Kretinga are 15–6; with the usual five, 13–26.** It's the spacing: one more shooter pulls a Žalgiris helper out of the paint, and Kretinga are 7/9 at the rim. That five has just cut the lead to nine, against a Žalgiris bench group that has gone cold.",
+   "ts": 1793383240,
+   "evidence": "Bruzdeilinas five: 15–6 in 25 poss. Starting five: 13–26 in 50. Kretinga 8–2 run Q3 4:03–2:30. Kretinga rim 7/9"
+  },
+  {
+   "when": "Q3 2:09",
+   "tag": "ADVICE",
+   "text": "**Keep the Bruzdeilinas five on into Q4.** It's +9 tonight while the starting five is −13. Ride it.",
+   "ts": 1793383240,
+   "team": 2,
+   "evidence": "15–6 in 25 possessions vs 13–26 in 50"
   }
  ]
 }
