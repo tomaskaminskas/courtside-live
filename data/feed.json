@@ -258,6 +258,21 @@
    "text": "Two opposite bets on minutes. Bardauskas came out of his timeout **still without Grenda or Astrauskas**, saving them for later at the cost of a half court that has scored 2 points in 10 set possessions. Mikaločius hasn't sat Urbonas once: 15 straight minutes, and his three turnovers are the kind tired legs make against pressure.",
    "ts": 1793381007,
    "evidence": "Žalgiris vs set defence: 10 poss, 0.20. Urbonas 15:06 straight, 3 TO, 2/6 FG"
+  },
+  {
+   "when": "Q2 3:51",
+   "tag": "TIMEOUT",
+   "text": "Called it in the preview: **the Žalgiris timeout stopped the run again**, 4–0 in the four trips after it, and Grenda is back on. It wasn't a half-court set that did it: one of the baskets came off a seventh steal. Kretinga's turnovers have now given up 11 points. That's the whole margin, plus a bit.",
+   "ts": 1793381118,
+   "evidence": "After Žalgiris timeout Q2 5:31: 4–0 over 4 trips. Steals → 11 pts in 7 poss. Score 30–22"
+  },
+  {
+   "when": "Q2 3:51",
+   "tag": "ADVICE",
+   "text": "**Give Urbonas two minutes before half-time.** 16 straight minutes, 4 turnovers; Bruzdeilinas and Goriunovas can bring it up.",
+   "ts": 1793381119,
+   "team": 2,
+   "evidence": "Urbonas 16:00 straight, 4 TO; Bruzdeilinas +16 on / −58 off"
   }
  ]
 }
